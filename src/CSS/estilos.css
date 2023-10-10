@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #000;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Public Sans', sans-serif;
+}
+
+/*CABEÇALHO*/
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+    max-width: 1170px;    
+    margin: 0 auto;
+    flex-wrap: wrap;
+    scroll-behavior: smooth;
+}
+
+@media(max-width: 624px) {
+     .cabecalho {
+        justify-content: center;
+    }
+
+    .cabecalho .logo {
+        margin-bottom: 30px;
+    }
+    .navegacao .menu .item a{
+        font-size: calc(0.6em + 1vw);
+    }
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 800;
+}
+
+.logo .imagem {
+    width: 100px;
+}
+
+.logo .titulo{
+    transition: 0.3s ease-in-out;
+    margin-left: 7px;
+    font-size: 17px;
+}
+
+.logo:hover .titulo{
+    color: #1ED760;
+}
+
+.navegacao .menu {
+    display: flex;
+}
+
+.navegacao .menu .item {
+    margin: 10px;    
+}
+
+.navegacao .menu .item a {
+    padding: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+.navegacao .menu .item a:hover {
+    background-color: #1ED760;
+    color: white;
+}
+
+/* CABEÇALHO */
+
+/* PAINEL */
+
+.conteudo-principal .paineis{
+    position: relative;
+    height: 700px;
+    display: flex;
+    justify-content: center;   
+    align-items: center; 
+}
+
+@media (max-width: 900px){
+    .conteudo-principal .paineis{
+        height: 500px;
+    }
+}
+
+.conteudo-principal .paineis .imagem-painel {
+    background-repeat: no-repeat; /*explicar o no-repeat  */
+    background-size: cover; /*explicar o cover  */
+    background-position: center;
+    min-width: 100%;  /*explicar o vw  */
+    height: 100%;
+    position: absolute; /*explicar o absolute  */
+    z-index: -1;
+    filter: brightness(70%); /*explicar o filtro   */
+    opacity: 0;
+    transition: 0.5s ease-out;
+    font-size: 20px;
+}
+
+.conteudo-principal .paineis .imagem-painel.projeto1{
+    background-image: url('../imagens/painel1.jpg'); /*explicar voltar a pasta  */
+}
+
+.conteudo-principal .paineis .imagem-painel.projeto2{
+    background-image: url('../imagens/painel2.jpg'); /*explicar voltar a pasta  */
+}
+
+.conteudo-principal .paineis .imagem-painel.projeto3{
+    background-image: url('../imagens/painel3.jpg'); /*explicar voltar a pasta  */
+}
+
+.conteudo-principal .paineis .imagem-painel.mostrar{
+    opacity: 1;
+}
+
+.conteudo-principal .paineis .titulo{        
+    color: #fff;
+    text-transform: uppercase;
+    font-size: calc(1em + 1vw);
+}
+
+.conteudo-principal .paineis .seta{
+    background: url(../imagens/seta.png) no-repeat center;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    position: absolute; 
+    text-indent: 100%; /* serve pra desaparecer o texto */
+    overflow: hidden; /* serve pra desaparecer o texto */
+}
+
+.conteudo-principal .paineis .seta.desabilitar{
+    opacity: 0.5;
+    cursor: auto;
+}
+
+.conteudo-principal .paineis .btn-voltar{
+    left: 20px;
+    transform: rotateY(180deg); /* vira a imagem da seta */
+}
+
+.conteudo-principal .paineis .btn-avancar{
+    right: 20px;
+}
+
+/* PAINEL */
+
+/* QUEM SOMOS */
+
+.quem-somos {     
+    background-color: #2941AB;    
+}
+
+.quem-somos .conteudo{
+    display: flex;            
+    align-items: center;
+    padding: 0 10%;
+}
+
+.quem-somos .conteudo .informacoes{
+    width: 40%;    
+}
+
+.quem-somos .imagem{    
+    width: 60%;    
+}
+
+@media(max-width: 1200px){
+    .quem-somos .conteudo{
+        flex-direction: column;
+        text-align: center;
+        padding: 100px 30px;
+    }
+
+    .quem-somos .conteudo .informacoes{
+        margin-bottom: 30px;
+    }
+
+    .quem-somos .conteudo .informacoes {
+        width: 100%;
+    }
+
+    .quem-somos .imagem {
+        display: none;
+    }
+}
+
+.quem-somos .conteudo .informacoes .titulo{
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #1ED760;
+}
+
+.quem-somos .conteudo .informacoes .texto{
+    font-size: 20px;    
+    line-height: 1.5;
+    color: #ffffff;
+    font-weight: 400;    
+}
+
+/* QUEM SOMOS */
+
+/* RODAPÉ */
+
+.rodape{    
+    padding: 80px 0 20px 0;
+}
+
+.rodape .navegacao{
+    max-width: 1170px;    
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;    
+}
+
+@media(max-width: 940px){
+    .rodape .navegacao {
+        justify-content: center;
+    }
+
+    .rodape .navegacao .logo {
+        margin-bottom: 30px;
+    }
+
+    .rodape .navegacao .logo,
+    .rodape .navegacao .redes-sociais    
+    {
+        width: 100%;
+        justify-content: center;
+    } 
+
+    .rodape .navegacao .menu {
+        margin: 50px 0;
+        flex-direction: column;        
+        align-items: center;
+    }
+
+    .rodape .navegacao .menu .item {
+        margin: 20px 0;
+    }
+}
+
+.rodape .redes-sociais{
+    display: flex;        
+}
+
+.rodape .redes-sociais a{
+    display: flex;
+    justify-content: center;
+    margin: 0 10px;
+    border: 2px solid #111;
+    padding: 15px;
+    width: 65px;
+    border-radius: 50%;
+    transition: 0.3s ease-in-out;
+    font-size: 30px;
+}
+
+.rodape .redes-sociais a:hover{
+    background-color: #1ED760;
+}
+
+.rodape .copyright{
+    margin-top: 70px;
+    text-align: center;    
+}
+
+/* RODAPÉ */
