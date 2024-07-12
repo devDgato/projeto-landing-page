@@ -2,7 +2,7 @@
     Landing page
 </h1>
 <h2 align="center">
-  <a align="center" href="" target="_blank">🔗 See the site 🌐</a>
+  <a align="center" href="https://devdgato.github.io/projeto-landing-page/" target="_blank">🔗 See the site 🌐</a>
 </h2>
 
 
